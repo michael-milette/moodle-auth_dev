@@ -4,19 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ## [3.0.0] 2026-08-04
 
+### Added
+
+- Exiting 'Log in as' now works for any user who holds the moodle/user:loginas capability, such as managers, instead of being restricted to site administrators.
+
 ### Changed
 
 - Renamed the plugin from "Auth Development tools" to "Exit Log In As". The old name suggested a developer tool and kept administrators away from a feature most of them use daily.
 - The auth_dev component name is unchanged, so existing sites upgrade normally with no migration steps required.
 
-### Added
-
-- Exiting 'Log in as' now works for any user who holds the moodle/user:loginas capability, such as managers, instead of being restricted to site administrators.
-
 ### Fixed
 
-- Exiting 'Log in as' no longer redirects to a non-existent course if the course id is invalid.
-- Exiting 'Log in as' outside of a course now returns to the site home page, matching the behaviour of Moodle core.
+- Exiting 'Log in as' now returns you to the page you were viewing, instead of always dropping you on the course home page or the site home page.
+- Exiting 'Log in as' no longer logs you out completely if the course was deleted while the emulated session was open. You are returned to the site home page instead of an error page.
 
 ### Updated
 
