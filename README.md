@@ -101,7 +101,13 @@ Uninstall the plugin by going into:
 
 # Limitations
 
-No limitations have been reported as of August 2026. If you run into one, please let us know through the [Bug Tracker](https://github.com/michael-milette/moodle-auth_dev/issues).
+**Returning to the exact page depends on your browser.** To send you back to the page you were viewing, the plugin reads the referring URL supplied by your browser. Some privacy extensions and stricter referrer policies remove it. When that happens, you are returned to the course home page instead, or to the site home page if you were not in a course. You are never logged out because of it.
+
+**Pages that only the emulated user can see.** If you were viewing something specific to the user you were emulating, you are returned to that page as yourself. Most content is visible to administrators anyway, but you may occasionally see different content than you did a moment earlier, or a permission error.
+
+**A deleted course affects non-administrators differently.** If the course you were viewing is deleted while your emulated session is open, site administrators are still returned to their own account. Users who hold moodle/user:loginas only within a category or a course, such as managers, are logged out completely in that situation, because the capability can no longer be confirmed once the course is gone.
+
+If you run into a limitation not listed here, please let us know through the [Bug Tracker](https://github.com/michael-milette/moodle-auth_dev/issues).
 
 # Language Support
 
@@ -120,6 +126,12 @@ https://github.com/michael-milette/moodle-auth_dev
 **Exit Log In As isn't working.**
 Confirm the plugin is enabled under Home ▶ Site administration ▶ Plugins ▶ Authentication ▶ Manage authentication. It has no effect while disabled.
 
+**I end up on the course home page instead of the page I was viewing.**
+Your browser is not sending the referring URL, so the plugin falls back to the course home page. This is usually caused by a privacy extension or a strict referrer policy. It is a limitation of the information available to the plugin rather than a fault, and you are still returned to your own account.
+
+**I was logged out completely instead of returning to my account.**
+This happens if the course you were viewing was deleted during your emulated session and you are not a site administrator. See [Limitations](#limitations). If neither applies, please report it through the [Bug Tracker](https://github.com/michael-milette/moodle-auth_dev/issues).
+
 ## Known Compatibility Issues
 
 No compatibility issues have been reported as of August 2026. If you encounter one, please report it through the [Bug Tracker](https://github.com/michael-milette/moodle-auth_dev/issues).
@@ -135,6 +147,15 @@ Anyone who is entitled to use "Log in as" in the first place, in other words any
 
 **Does this change how normal users log out?**
 No, unless you enable the optional logout redirect URL, which applies to all users, including those not using "Log in as".
+
+**Where do I end up after exiting "Log in as"?**
+On the page you were viewing when you exited. If your browser does not provide that information, you are returned to the home page of the course you were in, or to the site home page if you were not in a course.
+
+**What happens if the course is deleted while I am logged in as someone?**
+You are returned to your own account and sent to the site home page, rather than to an error page. Note the exception for category and course level managers described under [Limitations](#limitations).
+
+**Does this work outside of a course, such as on a user profile or the Dashboard?**
+Yes. "Log in as" can be exited from anywhere, not only from within a course.
 
 IMPORTANT: Although we expect everything to work, this release has not been fully tested in every situation. If you find a problem, please help by reporting it in the [Bug Tracker](https://github.com/michael-milette/moodle-auth_dev/issues).
 
