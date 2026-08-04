@@ -18,7 +18,7 @@ All notable changes to this project will be documented in this file.
 ### Updated
 
 - Compatible with Moodle 3.11 to 5.2
-- Compatible with PHP 7.3 to 8.4.
+- Compatible with PHP 7.4 to 8.4.
 
 ## [2.3.0] 2026-05-11
 

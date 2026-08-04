@@ -4,7 +4,7 @@ Exit 'Log In As' for Moodle LMS
 ===============================
 
 [![Moodle Plugin CI](https://github.com/michael-milette/moodle-auth_dev/actions/workflows/moodle-ci.yml/badge.svg)](https://github.com/michael-milette/moodle-auth_dev/actions/workflows/moodle-ci.yml)
-![PHP](https://img.shields.io/badge/PHP-v7.3%20to%20v8.4-blue.svg)
+![PHP](https://img.shields.io/badge/PHP-v7.4%20to%20v8.4-blue.svg)
 ![Moodle](https://img.shields.io/badge/Moodle-v3.11%20to%20v5.2-orange.svg)
 [![GitHub Issues](https://img.shields.io/github/issues/michael-milette/moodle-auth_dev.svg)](https://github.com/michael-milette/moodle-auth_dev/issues)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-green.svg)](#contributing)
@@ -55,7 +55,7 @@ To enable Exit Log In As, go to:
 
 # Requirements
 
-This plugin requires Moodle LMS 3.11 to 5.2 and PHP 7.3 to 8.4. See https://moodle.org/ for Moodle LMS downloads.
+This plugin requires Moodle LMS 3.11 to 5.2 and PHP 7.4 to 8.4. See https://moodle.org/ for Moodle LMS downloads.
 
 [(Back to top)](#table-of-contents)
 
