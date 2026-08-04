@@ -69,7 +69,7 @@ https://github.com/michael-milette/moodle-auth_dev
 # Installation
 
 ## Using Git
-- To install it using git, type this command in the root of your Moodle LMS install:
+- To install it using git, type this command from your Moodle LMS webroot:
 ```
 git clone git@github.com:michael-milette/moodle-auth_dev.git auth/dev
 ```
@@ -77,7 +77,7 @@ git clone git@github.com:michael-milette/moodle-auth_dev.git auth/dev
 ## The download way
 
 * Download the zip from <https://github.com/michael-milette/moodle-auth_dev/archive/master.zip>
-* Unzip it into the auth/ folder of your Moodle LMS install
+* Unzip it into the auth/ folder of your Moodle LMS webroot
 * Rename the new folder "moodle-auth_dev-master" to "dev"
 
 # Updating
