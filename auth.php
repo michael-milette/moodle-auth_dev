@@ -20,7 +20,7 @@
  * @package   auth_dev
  * @copyright 2026 TNG Consulting Inc. {@link https://www.tngconsulting.ca}
  * @author    Michael Milette
- * @copyright 2017-2026 Carlos Escobedo <http://www.twitter.com/carlosagile>)
+ * @copyright 2014-2026 Carlos Escobedo <http://www.twitter.com/carlosagile>)
  * @author    Carlos Escobedo <http://www.twitter.com/carlosagile>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -35,7 +35,7 @@ require_once($CFG->libdir . '/authlib.php');
  * @package   auth_dev
  * @copyright 2026 TNG Consulting Inc. {@link https://www.tngconsulting.ca}
  * @author    Michael Milette
- * @copyright 2017-2026 Carlos Escobedo <http://www.twitter.com/carlosagile>)
+ * @copyright 2014-2026 Carlos Escobedo <http://www.twitter.com/carlosagile>)
  * @author    Carlos Escobedo <http://www.twitter.com/carlosagile>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

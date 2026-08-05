@@ -195,7 +195,7 @@ https://github.com/michael-milette/moodle-auth_dev
 
 # License
 
-Copyright © 2017-2026 TNG Consulting Inc. - https://www.tngconsulting.ca/
+Copyright © 2014-2026 TNG Consulting Inc. - https://www.tngconsulting.ca/
 
 This file is part of Exit 'Log in As' for Moodle - https://moodle.org/
 
