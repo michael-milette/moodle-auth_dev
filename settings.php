@@ -28,10 +28,17 @@
 defined('MOODLE_INTERNAL') || die;
 
 if ($ADMIN->fulltree) {
-
-    $settings->add(new admin_setting_configcheckbox('auth_dev/enablelogouturl', get_string('config_enablelogouturl', 'auth_dev'),
-        get_string('config_enablelogouturl_description', 'auth_dev'), 0));
-    $settings->add(new admin_setting_configtext('auth_dev/logouturl',
-        get_string('config_logouturl', 'auth_dev'), '', '', PARAM_RAW_TRIMMED));
-
+    $settings->add(new admin_setting_configcheckbox(
+        'auth_dev/enablelogouturl',
+        get_string('config_enablelogouturl', 'auth_dev'),
+        get_string('config_enablelogouturl_description', 'auth_dev'),
+        0
+    ));
+    $settings->add(new admin_setting_configtext(
+        'auth_dev/logouturl',
+        get_string('config_logouturl', 'auth_dev'),
+        '',
+        '',
+        PARAM_RAW_TRIMMED
+    ));
 }

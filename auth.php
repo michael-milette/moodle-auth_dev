@@ -27,7 +27,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->libdir.'/authlib.php');
+require_once($CFG->libdir . '/authlib.php');
 
 /**
  * Exit Log In As plugin.
@@ -101,7 +101,7 @@ class auth_plugin_dev extends auth_plugin_base {
         global $CFG;
 
         if ($coursecontext) {
-            // get_local_referer() filters through PARAM_LOCALURL, so an external or absent
+            // The get_local_referer() filters through PARAM_LOCALURL, so an external or absent
             // referer yields an empty string and cannot be used to redirect off site.
             $referer = get_local_referer(false);
 
