@@ -5,7 +5,7 @@ Exit 'Log In As' for Moodle LMS
 
 [![Moodle Plugin CI](https://github.com/michael-milette/moodle-auth_dev/actions/workflows/moodle-ci.yml/badge.svg)](https://github.com/michael-milette/moodle-auth_dev/actions/workflows/moodle-ci.yml)
 ![PHP](https://img.shields.io/badge/PHP-v7.4%20to%20v8.4-blue.svg)
-![Moodle](https://img.shields.io/badge/Moodle-v3.11%20to%20v5.2-orange.svg)
+![Moodle](https://img.shields.io/badge/Moodle-v3.11%20to%20v5.3-orange.svg)
 [![GitHub Issues](https://img.shields.io/github/issues/michael-milette/moodle-auth_dev.svg)](https://github.com/michael-milette/moodle-auth_dev/issues)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-green.svg)](#contributing)
 [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](#license)
@@ -55,7 +55,7 @@ To enable Exit Log In As, go to:
 
 # Requirements
 
-This plugin requires Moodle LMS 3.11 to 5.2 and PHP 7.4 to 8.4. See https://moodle.org/ for Moodle LMS downloads.
+This plugin requires Moodle LMS 3.11 or later and PHP 7.4 or later. See https://moodle.org/ for Moodle LMS downloads.
 
 [(Back to top)](#table-of-contents)
 
@@ -79,6 +79,21 @@ git clone git@github.com:michael-milette/moodle-auth_dev.git auth/dev
 * Download the zip from <https://github.com/michael-milette/moodle-auth_dev/archive/master.zip>
 * Unzip it into the auth/ folder of your Moodle LMS webroot
 * Rename the new folder "moodle-auth_dev-master" to "dev"
+
+## Completing the installation
+
+1. Log in as a site administrator and go to:
+
+        Home ▶ Site administration ▶ Notifications
+
+    ...and follow the prompts to complete the installation.
+2. **Enable the plugin.** It does nothing until you do. Go to:
+
+        Home ▶ Site administration ▶ Plugins ▶ Authentication ▶ Manage authentication
+
+    ...and enable "Exit Log In As" in the list of authentication methods.
+
+[(Back to top)](#table-of-contents)
 
 # Updating
 

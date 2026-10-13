@@ -27,8 +27,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2026080500;
+$plugin->version   = 2026101300;
 $plugin->requires  = 2021051700; // Moodle 3.11 release and upwards.
 $plugin->component = 'auth_dev';
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '3.0';
+$plugin->release = '3.0.0';

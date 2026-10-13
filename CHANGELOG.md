@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.0.0] 2026-08-04
+## [3.0.0] 2026-10-13
 
 ### Added
 
@@ -20,7 +20,7 @@ All notable changes to this project will be documented in this file.
 
 ### Updated
 
-- Compatible with Moodle 3.11 to 5.2
+- Compatible with Moodle 3.11 to 5.3
 - Compatible with PHP 7.4 to 8.4.
 - Removed the unnecessary MOODLE_INTERNAL guard from the autoloaded privacy provider class.
 - Installation instructions now refer to the Moodle webroot, which is correct both for Moodle 5.x, where the code lives under public/, and for earlier releases.
