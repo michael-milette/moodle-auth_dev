@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Exit Log In As</title>
+  <rect width="64" height="64" rx="12" fill="#F1F1F1"/>
+  <g transform="translate(-2 1)">
+  <g fill="#000000">
+    <circle cx="45" cy="21" r="8"/>
+    <path d="M31 50c0-10 6-16 14-16s14 6 14 16z"/>
+  </g>
+  <g fill="#F68E2C">
+    <path d="M28 44H18a9 9 0 0 1 0-18h7" fill="none" stroke="#F68E2C" stroke-width="6"/>
+    <path d="M24 17l11 9-11 9z"/>
+  </g>
+</g>
+</svg>
