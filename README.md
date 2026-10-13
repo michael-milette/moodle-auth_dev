@@ -39,7 +39,7 @@ Exit 'Log In As' for Moodle LMS
 
 # Basic Overview
 
-When a site administrator uses Moodle LMS's "Log in as" feature to view the site as another user, logging out normally ends the administrator's own session along with the emulated one. This is extremely annoying if you need to do it regularly throughout your day.
+When you use Moodle LMS's "Log in as" feature to view the site as another user, logging out normally ends your own session along with the emulated one. This is extremely annoying if you need to do it regularly throughout your day.
 
 Exit Log In As changes that: It detects when you're logged in as another user and, instead of a full logout, returns you to your own account and the course you were viewing.
 
@@ -131,7 +131,7 @@ No compatibility issues have been reported as of August 2026. If you encounter o
 ## Answers to Frequently Asked Questions
 
 **Who can use Exit Log In As?**
-Exiting an emulated session only applies to site administrators using "Log in as". Regular users are unaffected by this behaviour.
+Anyone who is entitled to use "Log in as" in the first place, in other words any user holding the moodle/user:loginas capability. That includes site administrators and, by default, managers. Regular users are unaffected by this behaviour.
 
 **Does this change how normal users log out?**
 No, unless you enable the optional logout redirect URL, which applies to all users, including those not using "Log in as".

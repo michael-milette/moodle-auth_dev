@@ -25,7 +25,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['auth_devdescription'] = 'Lets a site administrator exit an emulated "Log in as" session without a full logout, and optionally redirects users to a custom URL on logout.';
+$string['auth_devdescription'] = 'Lets a user exit an emulated "Log in as" session without a full logout, and optionally redirects users to a custom URL on logout.';
 $string['pluginname'] = 'Exit Log In As';
 $string['config_logouturl'] = 'Logout url redirection';
 $string['config_enablelogouturl'] = 'Enable Logout url redirection';

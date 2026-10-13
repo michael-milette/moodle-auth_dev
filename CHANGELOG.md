@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## [3.0.0] 2026-08-04
 
+### Added
+
+- Exiting 'Log in as' now works for any user who holds the moodle/user:loginas capability, such as managers, instead of being restricted to site administrators.
+
+### Fixed
+
+- Exiting 'Log in as' no longer redirects to a non-existent course if the course id is invalid.
+- Exiting 'Log in as' outside of a course now returns to the site home page, matching the behaviour of Moodle core.
+
 ### Updated
 
 - Compatible with Moodle 3.11 to 5.2

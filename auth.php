@@ -59,20 +59,41 @@ class auth_plugin_dev extends auth_plugin_base {
     public function prelogout_hook() {
         global $CFG, $SESSION;
 
-        if (\core\session\manager::is_loggedinas()) {
-            $id = optional_param('id', 0, PARAM_INT);
-            // IF ID==0 then logout request, notthing to do.
-            if ($id) {
-                $realuser = \core\session\manager::get_realuser();
-                // Check is siteadmin.
-                // Only siteadmins can use this tool.
-                if (is_siteadmin($realuser)) {
-                    complete_user_login($realuser);
-                    $SESSION->wantsurl = "$CFG->wwwroot/course/view.php?id=".$id;
-                    redirect($SESSION->wantsurl);
-                }
-            }
+        if (!\core\session\manager::is_loggedinas()) {
+            return;
         }
+
+        // If id == 0, this is an ordinary logout request. Nothing to do.
+        $id = optional_param('id', 0, PARAM_INT);
+        if (!$id) {
+            return;
+        }
+
+        // Only return to a course that actually exists.
+        $coursecontext = \context_course::instance($id, IGNORE_MISSING);
+        if (!$coursecontext) {
+            return;
+        }
+
+        // Restore the session of whoever started the emulated session, provided they
+        // still hold the capability that let them use 'Log in as' in the first place.
+        // Site administrators always pass this check.
+        $realuser = \core\session\manager::get_realuser();
+        if (!has_capability('moodle/user:loginas', $coursecontext, $realuser)) {
+            return;
+        }
+
+        complete_user_login($realuser);
+
+        // Return to the course that was being viewed, or to the site home when the
+        // emulated session was not inside a course. This mirrors what core does at
+        // the end of /course/loginas.php.
+        if ($id == SITEID) {
+            $SESSION->wantsurl = $CFG->wwwroot . '/?redirect=1';
+        } else {
+            $SESSION->wantsurl = $CFG->wwwroot . '/course/view.php?id=' . $id;
+        }
+        redirect($SESSION->wantsurl);
     }
 
     /**
