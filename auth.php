@@ -41,8 +41,8 @@ require_once($CFG->libdir.'/authlib.php');
  */
 class auth_plugin_dev extends auth_plugin_base {
     /**
-    * The name of the component. Used by the configuration.
-    */
+     * The name of the component. Used by the configuration.
+     */
     const COMPONENT_NAME = 'auth_dev';
 
     /**
@@ -118,7 +118,7 @@ class auth_plugin_dev extends auth_plugin_base {
      *
      * @return bool Authentication success or failure.
      */
-    function user_login($username, $password) {
+    public function user_login($username, $password) {
         return false;
     }
 }

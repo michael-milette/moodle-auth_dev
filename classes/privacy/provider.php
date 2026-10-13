@@ -24,25 +24,24 @@
  * @author    Carlos Escobedo <http://www.twitter.com/carlosagile>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 namespace auth_dev\privacy;
-defined('MOODLE_INTERNAL') || die();
+
 /**
  * Privacy Subsystem for auth_dev implementing null_provider.
  *
+ * @copyright  2026 TNG Consulting Inc. <www.tngconsulting.ca>
  * @copyright  2018 Carlos Escobedo <carlos@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class provider implements \core_privacy\local\metadata\null_provider {
-    // This trait must be included.
-    use \core_privacy\local\legacy_polyfill;
-
     /**
      * Get the language string identifier with the component's language
      * file to explain why this plugin stores no data.
      *
      * @return  string
      */
-    public static function _get_reason() {
+    public static function get_reason(): string {
         return 'privacy:metadata';
     }
 }

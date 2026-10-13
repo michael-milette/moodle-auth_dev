@@ -12,11 +12,13 @@ All notable changes to this project will be documented in this file.
 
 - Exiting 'Log in as' no longer redirects to a non-existent course if the course id is invalid.
 - Exiting 'Log in as' outside of a course now returns to the site home page, matching the behaviour of Moodle core.
+- Removed the deprecated legacy_polyfill trait from the privacy provider. It was listed as removed in 2.3.0 but was still in use.
+- Added the missing public visibility modifier to the user_login() method.
 
 ### Updated
 
 - Compatible with Moodle 3.11 to 5.2
-- Compatible with PHP 7.3 to 8.3.
+- Compatible with PHP 7.3 to 8.4.
 
 ## [2.3.0] 2026-05-11
 
